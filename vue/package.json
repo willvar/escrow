@@ -1,0 +1,47 @@
+{
+  "name": "@willvar/escrow-vue",
+  "version": "0.2.0",
+  "description": "Browser-side DOFS v1 object codec and DEK utilities for escrow key custody",
+  "author": "William Varmus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willvar/escrow.git",
+    "directory": "vue"
+  },
+  "bugs": "https://github.com/willvar/escrow/issues",
+  "homepage": "https://github.com/willvar/escrow#readme",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/escrow-vue.js",
+  "module": "./dist/escrow-vue.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/escrow-vue.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build && vue-tsc -p tsconfig.build.json --emitDeclarationOnly",
+    "check": "vue-tsc -p tsconfig.json --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepack": "npm run build",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.1",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.2",
+    "vitest": "^4.0.18",
+    "vue-tsc": "^3.2.6"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

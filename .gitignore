@@ -1,0 +1,11 @@
+# Go build/test artifacts
+*.test
+*.out
+
+# Frontend
+vue/node_modules/
+vue/dist/
+vue/*.tsbuildinfo
+
+# Node caches
+node_modules/
